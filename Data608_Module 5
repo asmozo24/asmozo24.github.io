@@ -1,7 +1,60 @@
 <!DOCTYPE html>
 <html>
+
+<h1> Data608 Module 5: Introduction to Javascript </h1>
+
+<h2>Reversing any word user type in.</h2>
+
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<script type="text/javascript">
+var words = prompt("Want to see the reverse of your words: Please type-in your words or a sentence.");
+document.write("Here is/are your word(s):<br>")
+//document.write("\n")
+document.write(words)
+output='new'
+output = words.split("").reverse().join("").split(" ").reverse().join(" ")  
+document.write("<br><br>Below is/are your word(s) being reversed:<br>")
+//document.write("\n")
+document.write(output);
+
+</script>
+
 </body>
+
+<h2>Printing a table with the first 20 multiples of
+user's number, table 5x4.</h2>
+<body>
+  
+  <script type="text/javascript">
+    var number = prompt("Please enter a number to see the first 20 multiples of that number.")
+   	document.write("The first 20 multiples of ", number)
+       	 row = 5;
+   		 col = 4;
+           m = 1;
+    createTable(row, col, number);
+    function createTable(row, col, number)
+    {
+      var j=1;
+      var output = "<table border='1' width='200' cellspacing='0'cellpadding='5'>";
+      for(i=1;i<=row;i++)
+      {
+    	output = output + "<tr>";
+        for(j =1; j<=col; j++)
+        {
+  		  output = output + "<td>" + (m)*number + "</td>";
+            m=m+1;
+   		  //j = j+1;
+   		}
+   		 output = output + "</tr>";
+   		 j = 1;
+    }
+    output = output + "</table>";
+    document.write(output);
+    }
+  </script>
+
+</body>
+
+
 </html>
